@@ -117,7 +117,7 @@
     }
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 colonnes côte à côte */
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       max-width: 1100px;
       margin: 0 auto;
@@ -129,20 +129,19 @@
       overflow: hidden;
     }
     .feature-img-wrapper {
-      height: 180px;              /* même hauteur pour toutes les images */
-      background: #0f172a;        /* même fond que le site */
+      height: 180px;
+      background: #0f172a;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: .5rem;
     }
-
     .feature-img-wrapper img {
       max-height: 100%;
       max-width: 100%;
       object-fit: contain;
       border-radius: .4rem;
-      background: transparent;    /* plus de fond noir autour */
+      background: transparent;
       padding: 0;
     }
     .feature-card-content {
@@ -192,15 +191,23 @@
       margin-top: 0;
       margin-bottom: .4rem;
     }
-    .team-member a {
-      display: inline-block;
-      margin-right: .5rem;
-      font-size: .8rem;
+    .socials {
+      display: flex;
+      gap: .6rem;
+      margin-bottom: .7rem;
+    }
+    .socials a {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(226,232,240,.04);
       color: var(--text);
       text-decoration: none;
-      opacity: .8;
+      font-size: .85rem;
     }
-    .team-member a:hover { opacity: 1; text-decoration: underline; }
     .repo-link {
       margin-top: 2rem;
     }
@@ -246,28 +253,12 @@
       font-size: .8rem;
       color: rgba(226,232,240,.35);
     }
-    .socials {
-  display: flex;
-  gap: .6rem;
-  margin-bottom: .7rem;
-    }
-    .socials a {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(226,232,240,.04);
-      color: var(--text);
-      text-decoration: none;
-      font-size: .85rem;
-    }
 
     @media (max-width: 900px) {
       nav { display: none; }
       .hero { padding-top: 3.5rem; }
       .hero-image { order: -1; margin-bottom: 1rem; }
+      .features-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -293,98 +284,87 @@
     </div>
     <div class="hero-image" aria-label="Aperçu de l'application LockFit">
       <div class="phone-mock">
-        <!-- tu as dit que ton image c'est : assets/image entrainements lockfit.png -->
         <img src="assets/image%20entrainements%20lockfit.png" alt="Écran LockFit - Liste des exercices" />
       </div>
     </div>
   </section>
 
-  <!-- 1. FEATURE SECTION (obligatoire) -->
+  <!-- FEATURE SECTION -->
   <section class="section" id="features">
     <h2>3 choses que tu fais avec LockFit</h2>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-img-wrapper">
-        <img src="assets/ecranConnexion.png" alt="Suivi d'une séance" />
+          <img src="assets/ecranConnexion.png" alt="Connexion utilisateur" />
+        </div>
         <div class="feature-card-content">
           <h3>Connecte-toi sur ton propre compte</h3>
-          <p>Créer ton compte, et fais partie de la communauté LockFit.</p>
+          <p>Crée ton compte et fais partie de la communauté LockFit.</p>
         </div>
       </div>
       <div class="feature-card">
         <div class="feature-img-wrapper">
-        <img src="assets/mesentrainements.png" alt="Vue progression" />
+          <img src="assets/mesentrainements.png" alt="Planification d'entraînements" />
+        </div>
         <div class="feature-card-content">
           <h3>La motivation ne s’improvise pas, elle se construit.</h3>
-          <p>Fais toi-même tes entraînements, planifie les à l'avance pour te préparer efficacement. </p>
+          <p>Fais toi-même tes entraînements, planifie-les à l’avance et prépare-toi efficacement.</p>
         </div>
       </div>
       <div class="feature-card">
         <div class="feature-img-wrapper">
-        <img src="assets/image%20entrainements%20lockfit.png" alt="Interface LockFit" />
+          <img src="assets/image%20entrainements%20lockfit.png" alt="Bibliothèque d'exercices" />
+        </div>
         <div class="feature-card-content">
           <h3>Ta séance, ton moment, ton rythme.</h3>
-          <p>Choisis tes exercises grâce a une bibliothèque bien garnie, et à toi de jouer !</p>
+          <p>Choisis tes exercices grâce à une bibliothèque bien garnie, et à toi de jouer !</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. ABOUT SECTION (obligatoire) -->
+  <!-- ABOUT SECTION -->
   <section class="about" id="about">
     <div class="about-inner">
       <h2>Pourquoi on a créé LockFit</h2>
-      <p>
-        LockFit est né d’un constat simple : beaucoup de sportifs s’entraînent sans réellement savoir où ils en sont.
-        On voulait une application simple, fluide et moderne qui aide à garder le cap. LockFit permet de suivre ses séances, visualiser sa progression et rester motivé sur le long terme.
-        Le projet vise à réunir les débutants et les confirmés autour d’un outil fiable et motivant, pensé pour ceux qui veulent transformer leurs efforts en véritables résultats.
-      </p>
+      <p>LockFit est né d’un constat simple : beaucoup de sportifs s’entraînent sans réellement savoir où ils en sont. On voulait une application simple, fluide et moderne qui aide à garder le cap. LockFit permet de suivre ses séances, visualiser sa progression et rester motivé sur le long terme. Le projet vise à réunir les débutants et les confirmés autour d’un outil fiable et motivant, pensé pour ceux qui veulent transformer leurs efforts en véritables résultats.</p>
 
-    <div class="team-links">
-      <div class="team-member">
-        <h3>Tom</h3>
-        <div class="socials">
-          <a href="https://github.com/tmlgde" target="_blank" rel="noopener noreferrer" aria-label="GitHub Tom">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/tom-lagarde-26392b223/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Tom">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://x.com/Zedkraa" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X Tom">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
+      <div class="team-links">
+        <div class="team-member">
+          <h3>Tom</h3>
+          <div class="socials">
+            <a href="https://github.com/tmlgde" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tom-lagarde-26392b223/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/Zedkraa" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+          <p style="font-size:.75rem; color:rgba(226,232,240,.6);">Développement & vision produit</p>
         </div>
-        <p style="font-size:.75rem; color:rgba(226,232,240,.6);">Développement & vision produit</p>
+
+        <div class="team-member">
+          <h3>Haggui</h3>
+          <div class="socials">
+            <a href="https://github.com/hagguishell" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/haggui-razafimaitso-6144aa371/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <p style="font-size:.75rem; color:rgba(226,232,240,.6);">Backend & intégration</p>
+        </div>
       </div>
 
-  <div class="team-member">
-    <h3>Haggui</h3>
-    <div class="socials">
-      <a href="https://github.com/hagguishell" target="_blank" rel="noopener noreferrer" aria-label="GitHub Haggui">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/haggui-razafimaitso-6144aa371/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Haggui">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-    </div>
-    <p style="font-size:.75rem; color:rgba(226,232,240,.6);">Backend & intégration</p>
-  </div>
-</div>
-
-
       <div class="repo-link">
-        Code source : <a href="https://github.com/tmlgde/tmlgde.github.io" target="_blank" rel="noopener noreferrer">voir le dépôt GitHub</a>
+        Code source : <a href="https://github.com/tmlgde/tmlgde.github.io" target="_blank">voir le dépôt GitHub</a>
       </div>
     </div>
   </section>
 
+  <!-- TESTIMONIAL -->
   <section class="testimonials">
     <div class="testimonial-box">
-      <p class="quote">“Depuis que j’utilise LockFit, j’ai arrêté la drogue et j'ai réussi a me reprendre en main, fini les grasses mat' jusqu'à 15h, vive LockFit !”</p>
+      <p class="quote">“Depuis que j’utilise LockFit, j’ai enfin un vrai suivi de mes séances et je reste régulier. Ça motive vraiment.”</p>
       <p class="author">Thomas, 22 ans</p>
     </div>
   </section>
 
+  <!-- DOWNLOAD -->
   <section class="download-section" id="download">
     <h2>Prêt à t’y mettre ?</h2>
     <p>Télécharge LockFit et commence à suivre tes entraînements comme un athlète. Même 3 séances par semaine, ça compte.</p>
