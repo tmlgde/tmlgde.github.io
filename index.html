@@ -128,14 +128,22 @@
       border-radius: 1rem;
       overflow: hidden;
     }
-    .feature-card img {
-      width: 100%;
-      display: block;
-      height: auto;
-      max-height: 240px;
+    .feature-img-wrapper {
+      height: 180px;              /* même hauteur pour toutes les images */
+      background: #0f172a;        /* même fond que le site */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .5rem;
+    }
+
+    .feature-img-wrapper img {
+      max-height: 100%;
+      max-width: 100%;
       object-fit: contain;
-      background: #000;
-      padding: .4rem; 
+      border-radius: .4rem;
+      background: transparent;    /* plus de fond noir autour */
+      padding: 0;
     }
     .feature-card-content {
       padding: 1rem 1.2rem 1.3rem;
@@ -296,6 +304,7 @@
     <h2>3 choses que tu fais avec LockFit</h2>
     <div class="features-grid">
       <div class="feature-card">
+        <div class="feature-img-wrapper">
         <img src="assets/ecranConnexion.png" alt="Suivi d'une séance" />
         <div class="feature-card-content">
           <h3>Connecte-toi sur ton propre compte</h3>
@@ -303,6 +312,7 @@
         </div>
       </div>
       <div class="feature-card">
+        <div class="feature-img-wrapper">
         <img src="assets/mesentrainements.png" alt="Vue progression" />
         <div class="feature-card-content">
           <h3>La motivation ne s’improvise pas, elle se construit.</h3>
@@ -310,6 +320,7 @@
         </div>
       </div>
       <div class="feature-card">
+        <div class="feature-img-wrapper">
         <img src="assets/image%20entrainements%20lockfit.png" alt="Interface LockFit" />
         <div class="feature-card-content">
           <h3>Ta séance, ton moment, ton rythme.</h3>
