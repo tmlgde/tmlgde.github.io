@@ -105,7 +105,7 @@
     }
     .phone-mock img { width: 100%; display: block; }
 
-    /* features (obligatoire) */
+    /* sections générales */
     .section {
       padding: 3.5rem 6%;
       background: var(--bg-soft);
@@ -115,6 +115,8 @@
       margin-bottom: 2rem;
       font-size: 1.7rem;
     }
+
+    /* features */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -169,6 +171,7 @@
     .about h2 {
       font-size: 1.6rem;
       margin-bottom: 1rem;
+      text-align: left;
     }
     .about p {
       line-height: 1.6;
@@ -254,11 +257,19 @@
       color: rgba(226,232,240,.35);
     }
 
+    /* responsive */
     @media (max-width: 900px) {
       nav { display: none; }
       .hero { padding-top: 3.5rem; }
       .hero-image { order: -1; margin-bottom: 1rem; }
       .features-grid { grid-template-columns: 1fr; }
+    }
+
+    /* titre vidéo */
+    #demo h2 {
+      text-align: center;
+      font-size: 1.7rem;
+      margin-bottom: 1.8rem;
     }
   </style>
 </head>
@@ -323,11 +334,29 @@
     </div>
   </section>
 
+  <!-- DEMO VIDEO SECTION -->
+  <section class="section" id="demo">
+    <h2>Voir LockFit en action</h2>
+    <div style="max-width:900px; margin:0 auto;">
+      <video controls muted style="width:100%; border-radius:1rem; display:block; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+        <source src="assets/demo-lockfit.mp4" type="video/mp4">
+        <source src="assets/demo-lockfit.mov" type="video/quicktime">
+        Ton navigateur ne supporte pas la lecture vidéo.
+      </video>
+    </div>
+  </section>
+
   <!-- ABOUT SECTION -->
   <section class="about" id="about">
     <div class="about-inner">
       <h2>Pourquoi on a créé LockFit</h2>
-LockFit est né d’un constat simple : beaucoup de sportifs s’entraînent sans réellement savoir où ils en sont. On voulait créer une application claire, fluide et moderne, qui aide à garder la motivation sur la durée. L’idée a commencé comme un petit projet personnel pour suivre nos séances, puis s’est transformée au fil des semaines en une véritable application complète, pensée pour accompagner chaque profil, du débutant au confirmé.
+      <p>
+        LockFit est né d’un constat simple : beaucoup de sportifs s’entraînent sans réellement savoir où ils en sont.
+        On voulait créer une application claire, fluide et moderne, qui aide à garder la motivation sur la durée.
+        L’idée a commencé comme un petit projet personnel pour suivre nos séances, puis s’est transformée au fil des semaines
+        en une véritable application complète, pensée pour accompagner chaque profil, du débutant au confirmé.
+      </p>
+
       <div class="team-links">
         <div class="team-member">
           <h3>Tom</h3>
